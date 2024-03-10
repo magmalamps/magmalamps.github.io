@@ -1,0 +1,68 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+div.header {
+    width: 70%;
+    margin: auto;
+    background-color: orange;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+div.menu {
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    /*grid-template-rows: ;*/
+    background-color: rgb(250, 170, 21);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+a.menunav {
+    display: grid;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px;
+    margin: 10px;
+    border-radius: 7px;
+    background-color: rgb(242, 195, 76);
+}
+
+body {
+    background-color: rgb(250, 213, 142);
+}
+
+a {
+    display: block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.content {
+    background-color: orange;
+    margin: auto;
+    width: 80%;
+    border-radius: 7px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a.about_link {
+    font-size: 16px;
+}

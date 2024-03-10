@@ -70,3 +70,8 @@ a.about_link {
 div.note {
     font-size: 14px;
 }
+
+.thanks {
+    margin: 0;
+    padding-top: 0;
+}

@@ -23,6 +23,9 @@ div.menu {
     border-bottom-right-radius: 10px;
 }
 
+h2.diy {
+    text-decoration: none;
+}
 
 a.menunav {
     display: grid;

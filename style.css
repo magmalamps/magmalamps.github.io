@@ -1,97 +1,40 @@
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: #121113;
+    color: aliceblue;
+    text-decoration: underline;
+    padding: 7px;
 }
 
 div.header {
-    width: 70%;
-    margin: auto;
-    background-color: orange;
-    height: 40px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    color: #121113;
+    background-color: rgb(52, 49, 49);
+    border-radius: 3vh;
 }
 
-div.menu {
-    width: 70%;
-    margin: auto;
+div.container {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    /*grid-template-rows: ;*/
-    background-color: rgb(250, 170, 21);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    color: #121113;
+    grid-template-columns: 25% 25% 25% 25% ;
+    grid-template-rows: auto;
 }
 
-h2.diy {
-    text-decoration: none;
-    color: #121113;
-}
-
-a.menunav {
+a.items {
     display: grid;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #121113;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 6px;
-    margin: 10px;
-    border-radius: 7px;
-    background-color: rgb(242, 195, 76);
-}
-
-body {
-    background-color: #f1b876;
-}
-
-a {
-    display: block;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: #121113;
     text-decoration: none;
     font-size: 20px;
-}
-
-p {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #121113;
-}
-
-div.content {
-    background-color: orange;
-    margin: auto;
-    width: 80%;
+    padding: 10px;
+    margin: 10px;
     border-radius: 7px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #121113;
+    background-color: rgb(134, 132, 127);
 }
 
-a.about_link {
-    font-size: 16px;
-    color: #121113;
+body {
+    background-color: rgb(32, 31, 31);
 }
 
-div.note {
-    font-size: 14px;
-    color: #121113;
-}
-
-h2 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: underline;
-    color: #121113;
-}
-
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+h1.centre {
+    text-decoration: none;
+    margin-top: 100px;
 }

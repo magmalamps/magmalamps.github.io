@@ -1,0 +1,39 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+div.header {
+    background-color: rgb(255, 190, 110);
+    border-radius: 7px;
+}
+
+input {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    width: 100%;
+}
+
+.divh2 {
+    padding: 7px;
+}
+
+div.result {
+    background-color: rgb(73, 72, 72);
+    color: aliceblue;
+    border-radius: 7px;
+}

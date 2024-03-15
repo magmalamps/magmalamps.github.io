@@ -15,6 +15,15 @@ MagmaLamps is a Website that contains all of my HTML projects. There are useful,
 - Cross platform
 
 
+## Defintion
+
+- Clipboard Creator: You can create and save infinite clipboards and use them at any time
+
+- Lava Lamps: Just some information about lava lamps on how they work, what they look like etc.
+
+- Mind Reader: A troll page which can "read" your mind
+
+
 ## Roadmap
 
 - Adding new projects
@@ -27,4 +36,5 @@ MagmaLamps is a Website that contains all of my HTML projects. There are useful,
 ## Programmers
 
 - [@MagmaLamps](https://github.com/magmalamps)
+
 

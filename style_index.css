@@ -20,27 +20,6 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-p.new {
-    background-color: rgb(233, 212, 157);
-    border-radius: 7px;
-    width: 50%;
-    margin-left: 25%;
-}
-
-p.info {
-    background-color: rgb(162, 233, 157);
-    border-radius: 7px;
-    width: 50%;
-    margin-left: 25%;
-}
-
-p.troll {
-    background-color: rgb(161, 157, 233);
-    border-radius: 7px;
-    width: 50%;
-    margin-left: 25%;
-}
-
 div.header {
     background-color: rgb(52, 49, 49);
     border-radius: 3vh;
@@ -63,45 +42,6 @@ a.items {
     margin: 10px;
     border-radius: 7px;
     background-color: rgb(134, 132, 127);
-}
-
-a.items_new {
-    display: grid;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #121113;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 7px;
-    background-color: rgb(233, 212, 157);
-}
-
-a.items_info {
-    display: grid;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #121113;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 7px;
-    background-color: rgb(162, 233, 157);
-}
-
-a.items_troll {
-    display: grid;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #121113;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 7px;
-    background-color: rgb(161, 157, 233);
 }
 
 body {

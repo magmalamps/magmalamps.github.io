@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="clip_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard Creator</title>
+</head>
+<body>
+    <h1>Clipboard Creator</h1>
+    <div class="container">
+        <div class="actions">
+            <button onclick="saveClipboard()">Save Clipboard</button>
+            <button onclick="setText()">Load Clipboard</button>
+            <button onclick="copy()">Copy Clipboard</button>
+        </div>
+        <br>
+        
+        <div class="text">
+            <p>Your Clipboard:</p>
+            <p  id="clipboard_text" class="under"></p>
+        </div>
+    </div>
+   
+    <h2>Why?</h2>
+    <p class="black">Sometimes you need to copy multiple things. This Website can create a new clipboard and save it to localStorage
+        so that you can access it at everytime you need! With this you can have <strong>two Clipboards</strong>: Your normal one and this one
+    </p>
+    <p class="black"><em>This website uses JavaScript. Make sure that you have enabled it.</em></p>
+    <a href="../index.html">-Go Back-</a>
+
+
+    <script>
+        const paragraph = document.getElementById('clipboard_text');
+        async function saveClipboard() {
+            const clipboard = await navigator.clipboard.readText();  
+            paragraph.innerHTML = clipboard;
+            localStorage.setItem("clipboard", clipboard);
+        }
+
+        async function setText() {
+            var loaded = localStorage.getItem("clipboard")
+            paragraph.innerHTML = loaded
+        }   
+
+        async function copy() {
+            var loaded = localStorage.getItem("clipboard")
+            navigator.clipboard.writeText(loaded)
+            alert("Copied saved clipboard to clipboard!")
+        }
+    </script>
+</body>
+</html>

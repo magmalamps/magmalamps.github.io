@@ -13,40 +13,77 @@
             <button onclick="saveClipboard()">Save Clipboard</button>
             <button onclick="setText()">Load Clipboard</button>
             <button onclick="copy()">Copy Clipboard</button>
+            <button onclick="deleteClip()">Delete Clipboard</button>
         </div>
         <br>
-        
+        <input type="text" id="name" placeholder="Your Clipboard tag">
         <div class="text">
-            <p>Your Clipboard:</p>
+            <p>Content of Tag:</p>
             <p  id="clipboard_text" class="under"></p>
+            <p>Your Clipboard tags:</p>
+            <p id="tags_avail"></p>
         </div>
     </div>
    
     <h2>Why?</h2>
-    <p class="black">Sometimes you need to copy multiple things. This Website can create a new clipboard and save it to localStorage
-        so that you can access it at everytime you need! With this you can have <strong>two Clipboards</strong>: Your normal one and this one
+    <p class="black">Sometimes you need to copy multiple things. This Website can create new clipboards and save them to the LocalStorage
+        so that you can access them at every time you need! With this you can have <strong>unlimited Clipboards</strong>.
     </p>
+
+    <h2>How?</h2>
+    <p class="black">
+        1. Enter a name for your Clipbord in the input field (e.g: "Clipboard1" please dont use spaces!) <br>
+        2. Choose an option: <strong>"Save"</strong> to save your current Clipboard under the given tag <br>   
+        <strong>"Load"</strong> to load the saved Clipboard under the given tag <br>
+        <strong>"Copy"</strong> to copy the saved Clipboard under the given tag to your Clipboard <br>
+        <strong>"Delete"</strong> to delete the saved Clipboard under the given tag <br>
+        3. The "Your Clipboard tags" section shows you all the tags of your saved Clipboards <br>
+    </p>
+
+
     <p class="black"><em>This website uses JavaScript. Make sure that you have enabled it.</em></p>
     <a href="../index.html">-Go Back-</a>
 
 
     <script>
         const paragraph = document.getElementById('clipboard_text');
+        
+        function refreshtext() {
+            const refresh_text = document.getElementById('tags_avail')
+
+            refresh_text.innerHTML = Object.keys(localStorage)
+        }
+
+        setInterval(refreshtext, 1000);
+
         async function saveClipboard() {
+            var tag = document.getElementById('name').value;
+
             const clipboard = await navigator.clipboard.readText();  
             paragraph.innerHTML = clipboard;
-            localStorage.setItem("clipboard", clipboard);
+            localStorage.setItem(tag, clipboard);
+            alert("Saved Clipboard: " + tag + " Content: " + clipboard)
         }
 
         async function setText() {
-            var loaded = localStorage.getItem("clipboard")
+            var tag = document.getElementById('name').value;
+
+            var loaded = localStorage.getItem(tag)
             paragraph.innerHTML = loaded
         }   
 
         async function copy() {
-            var loaded = localStorage.getItem("clipboard")
+            var tag = document.getElementById('name').value;
+
+            var loaded = localStorage.getItem(tag)
             navigator.clipboard.writeText(loaded)
-            alert("Copied saved clipboard to clipboard!")
+            alert("Copied Clipboard: " + tag)
+        }
+
+        async function deleteClip() {
+            var tag = document.getElementById('name').value;
+            localStorage.removeItem(tag);
+            alert("Removed Clipboard: " + tag)
         }
     </script>
 </body>

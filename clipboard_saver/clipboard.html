@@ -8,6 +8,11 @@
 </head>
 <body>
     <h1>Clipboard Creator</h1>
+    <input type="text" id="name" placeholder="Your Clipbord tag">
+
+    <br>
+    <br>
+
     <div class="container">
         <div class="actions">
             <button onclick="saveClipboard()">Save Clipboard</button>
@@ -15,16 +20,24 @@
             <button onclick="copy()">Copy Clipboard</button>
             <button onclick="deleteClip()">Delete Clipboard</button>
         </div>
-        <br>
-        <input type="text" id="name" placeholder="Your Clipbord tag">
+        
         <div class="text">
             <p>Content of Tag:</p>
-            <p  id="clipboard_text" class="under"></p>
+            <p  id="clipboard_text" class="under"><em>Load a clipboard first</em></p>
             <p>Your Clipboard tags:</p>
             <p id="tags_avail"></p>
         </div>
     </div>
-   
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <h2>Why?</h2>
     <p class="black">Sometimes you need to copy multiple things. This Website can create new clipboards and save them to the LocalStorage
         so that you can access them at every time you need! With this you can have <strong>unlimited Clipboards</strong>.

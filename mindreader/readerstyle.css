@@ -15,7 +15,7 @@ p {
 }
 
 div.header {
-    background-color: rgb(255, 190, 110);
+    background-color: rgb(93, 92, 90);
     border-radius: 7px;
 }
 
@@ -23,11 +23,21 @@ input {
     height: 30px;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #49484a;
+    border: solid;
+    border-radius: 7px;
+    border-color: #9b989d;
+    color: rgb(255, 255, 255);
 }
 
 button {
     height: 30px;
     width: 100%;
+    background-color: #49484a;
+    border-radius: 7px;
+    border: solid;
+    color: rgb(255, 255, 255);
+    border-color: #9b989d;
 }
 
 .divh2 {
@@ -35,7 +45,7 @@ button {
 }
 
 div.result {
-    background-color: rgb(73, 72, 72);
+    background-color: rgb(94, 93, 93);
     color: aliceblue;
     border-radius: 7px;
 }
@@ -47,4 +57,10 @@ a {
     color: #121113;
     text-decoration: none;
     font-size: 20px;
+    color: aliceblue;
+}
+
+body {
+    color: aliceblue;
+    background-color: #2b2a2c;
 }

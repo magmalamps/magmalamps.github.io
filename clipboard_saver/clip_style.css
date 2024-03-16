@@ -61,6 +61,7 @@ p.under {
 }
 
 input {
+    color: aliceblue;
     background-color: #121113;
     width: 100%;
     height: 30px;

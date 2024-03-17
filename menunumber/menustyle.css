@@ -1,0 +1,61 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    color: aliceblue;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    text-align: center;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    text-align: center;
+}
+
+div.buttons {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+input {
+    color: rgb(110, 110, 111);
+    margin: 5px;
+    text-align: center;
+    border-radius: 7px;
+    height: 30px;
+    border: solid;
+    border-color: rgb(92, 92, 93);
+    background-color: rgb(41, 40, 40);
+}
+
+div.container {
+    background-color: rgb(51, 50, 50);
+    border-radius: 7px;
+}
+
+button {
+    margin: 5px;
+    color: rgb(110, 110, 111);
+    border-radius: 7px;
+    border: solid;
+    border-color: rgb(92, 92, 93);
+    background-color: rgb(41, 40, 40);
+}
+
+a {
+    display: block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(220, 237, 251);
+    text-decoration: none;
+    font-size: 20px;
+}

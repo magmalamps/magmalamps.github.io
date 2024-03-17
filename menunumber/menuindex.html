@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="menustyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Number</title>
+</head>
+
+<body>
+    <h1>Menu Number Generator</h1>
+
+    <div class="container">
+        <div class="buttons">
+            <input type="number" placeholder="Minimum" id="min">
+            <input type="number" placeholder="Maximum" id="max">
+            <button onclick="MenuGenerate()">Suggest menu</button>
+        </div>
+
+        <p id="menuparagraph">Your menu:</p>
+        <br>
+    </div>
+
+    <h2>What?</h2>
+    <p>
+        If you are in a restaurant and you don´t know what you should
+        eat then this is perfect. It generates you a random meal!
+    </p>
+
+    <h2>How?</h2>
+    <p>
+        Enter the minium and a maximum number from your restaurant´s menu.
+        This Website will then suggest you one of these menus. Good luck and <strong>bonne appétit</strong>!
+    </p>
+    <br>
+    <br>
+    <a href="../index.html">-Go Back-</a>
+</body>
+
+<script>
+    function MenuGenerate() {
+        const paragraph = document.getElementById('menuparagraph');
+        var min = parseInt(document.getElementById('min').value);
+        var max = parseInt(document.getElementById('max').value);
+
+        if (isNaN(min) || isNaN(max)) {
+            paragraph.innerHTML = "Please only use numbers.";
+            return;
+        }
+
+        if (min >= max) {
+            paragraph.innerHTML = "Please make sure the maximum value is greater than the minimum value.";
+            return;
+        }
+
+        var randomMenu = Math.floor(Math.random() * (max - min + 1)) + min;
+        paragraph.innerHTML = "Your Menu: " + randomMenu;
+    }
+</script>
+
+</html>

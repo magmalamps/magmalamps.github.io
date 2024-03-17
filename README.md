@@ -23,7 +23,7 @@ MagmaLamps is a Website that contains all of my HTML projects. There are useful,
 
 - Mind Reader: A troll page which can "read" your mind
 
--Color Game!: A game where you try to get a rare color. You can compete with your friends!
+- Color Game!: A game where you try to get a rare color. You can compete with your friends!
 
 
 ## Roadmap

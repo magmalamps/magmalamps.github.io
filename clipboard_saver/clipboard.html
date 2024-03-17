@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="clip_style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clipboard Creator</title>
 </head>
+
 <body>
     <h1>Clipboard Creator</h1>
     <input type="text" id="name" placeholder="Your Clipbord tag">
@@ -20,10 +22,10 @@
             <button onclick="copy()">Copy Clipboard</button>
             <button onclick="deleteClip()">Delete Clipboard</button>
         </div>
-        
+
         <div class="text">
             <p>Content of Tag:</p>
-            <p  id="clipboard_text" class="under"><em>Load a clipboard first</em></p>
+            <p id="clipboard_text" class="under"><em>Load a clipboard first</em></p>
             <p>Your Clipboard tags:</p>
             <p id="tags_avail"></p>
         </div>
@@ -39,14 +41,16 @@
     <br>
 
     <h2>Why?</h2>
-    <p class="black">Sometimes you need to copy multiple things. This Website can create new clipboards and save them to the LocalStorage
-        so that you can access them at every time you need! With this you can have <strong>unlimited Clipboards</strong>.
+    <p class="black">Sometimes you need to copy multiple things. This Website can create new clipboards and save them to
+        the LocalStorage
+        so that you can access them at every time you need! With this you can have <strong>unlimited
+            Clipboards</strong>.
     </p>
 
     <h2>How?</h2>
     <p class="black">
         1. Enter a name for your Clipbord in the input field (e.g: "Clipboard1" please dont use spaces!) <br>
-        2. Choose an option: <strong>"Save"</strong> to save your current Clipboard under the given tag <br>   
+        2. Choose an option: <strong>"Save"</strong> to save your current Clipboard under the given tag <br>
         <strong>"Load"</strong> to load the saved Clipboard under the given tag <br>
         <strong>"Copy"</strong> to copy the saved Clipboard under the given tag to your Clipboard <br>
         <strong>"Delete"</strong> to delete the saved Clipboard under the given tag <br>
@@ -60,7 +64,7 @@
 
     <script>
         const paragraph = document.getElementById('clipboard_text');
-        
+
         function refreshtext() {
             const refresh_text = document.getElementById('tags_avail')
 
@@ -72,7 +76,7 @@
         async function saveClipboard() {
             var tag = document.getElementById('name').value;
 
-            const clipboard = await navigator.clipboard.readText();  
+            const clipboard = await navigator.clipboard.readText();
             paragraph.innerHTML = clipboard;
             localStorage.setItem(tag, clipboard);
             alert("Saved Clipboard: " + tag + " Content: " + clipboard)
@@ -83,7 +87,7 @@
 
             var loaded = localStorage.getItem(tag)
             paragraph.innerHTML = loaded
-        }   
+        }
 
         async function copy() {
             var tag = document.getElementById('name').value;
@@ -100,4 +104,5 @@
         }
     </script>
 </body>
+
 </html>

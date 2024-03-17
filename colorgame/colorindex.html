@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="colorstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game!</title>
+</head>
+<body onload="javascript:loadColor()">
+    <h1>Color Game!</h1>
+
+    <div class="Color_container">
+        <div class="color" id="colorID">
+            <h2 class="placeholder">Color</h2>
+        </div>
+
+        <div class="buttons">
+            <button onclick="generate()">Generate new</button>
+            <p id="rare_p">Rarity: </p>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>    
+
+    <h2>Goal:</h2>
+    <p>
+        Get the highest rareity possible and beat your friends. Blue is the most rare color. "Blue" is defined by a RGB code.
+        Your color also saves.
+    </p>
+
+    <h2>How?</h2>
+    <p>Everytime yu click the button a random color gets generated.
+        There are different rarities of colors. The rareity is based on how blue it is. More blue = higher rareity.
+        Try to get the most legendary
+        one. But you can always get a worse color!
+    </p>
+
+    <script>
+
+        function loadColor() {
+            const colorrn = document.getElementById('colorID');
+            const rare_text = document.getElementById('rare_p');
+            var color_loaded = localStorage.getItem("color")
+            var rare_loaded = localStorage.getItem("rare")
+
+            colorrn.style.backgroundColor = "#" + color_loaded;
+            rare_text.innerHTML = "Rarity: " + rare_loaded;
+        }
+
+        function generate() {
+            const colorrn = document.getElementById('colorID');
+            const rare_text = document.getElementById('rare_p');
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            colorrn.style.backgroundColor = "#" + randomColor;
+
+            var hexColor = randomColor;
+            hexColor = hexColor.replace('#', '');
+
+            var r = parseInt(hexColor.substring(0, 2), 16);
+            var g = parseInt(hexColor.substring(2, 4), 16);
+            var b = parseInt(hexColor.substring(4, 6), 16);
+
+            var blueIntensity = b / 255;
+
+            rare_text.innerHTML = "Rarity: " + blueIntensity.toFixed(2);
+
+            localStorage.setItem("color", randomColor)
+            localStorage.setItem("rare", blueIntensity.toFixed(2))
+        }
+    </script>
+</body>
+</html>

@@ -13,17 +13,20 @@ MagmaLamps is a Website that contains all of my HTML projects. There are useful,
 - Color Game!
 - Information about Lava Lamps
 - Mind Reader
+- Menu Number
 
 
 ## Defintion
 
 - Clipboard Creator: You can create and save infinite clipboards and use them at any time
 
+- Color Game!: A game where you try to get a rare color. You can compete with your friends!
+
 - Lava Lamps: Just some information about lava lamps on how they work, what they look like etc.
 
 - Mind Reader: A troll page which can "read" your mind
 
-- Color Game!: A game where you try to get a rare color. You can compete with your friends!
+- Menu Number: Generate a random meal to buy in a resteraunt
 
 
 ## Roadmap

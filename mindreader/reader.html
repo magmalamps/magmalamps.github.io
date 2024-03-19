@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="icon" href="icon/favicon.ico">
     <link rel="stylesheet" href="readerstyle.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mind Reader</title>
 </head>
+
 <body>
     <div class="header">
         <h1>Mind Reader</h1>
     </div>
     <h2>How?</h2>
     <p>1. Think of any number</p>
-    <input type="number" inputmode="numeric" pattern="[0-9]+"  placeholder="What number are you thinking about?" id="number_input">
+    <input type="number" inputmode="numeric" pattern="[0-9]+" placeholder="What number are you thinking about?"
+        id="number_input">
     <p>2. Click "Continue"</p>
     <div class="button">
         <button onclick="generate()">Continue</button>
@@ -43,29 +47,30 @@
             } else {
                 text.innerHTML = 'Starting process...'
 
-                setTimeout(function() {
+                setTimeout(function () {
 
                     text.innerHTML = 'Reading brainwaves...'
-                    
 
-                    setTimeout(function() {
+
+                    setTimeout(function () {
                         text.innerHTML = 'writing data...'
 
-                        setTimeout(function() {
+                        setTimeout(function () {
                             text.innerHTML = 'watering Bananas...'
 
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 text.innerHTML = 'completing...'
 
-                                setTimeout(function() {
-                                    text.innerHTML = 'Done! Your number was "' +  parsedValue + '" That is just a joke, but I guessed your number correctly &#128512;'
+                                setTimeout(function () {
+                                    text.innerHTML = 'Done! Your number was "' + parsedValue + '" That is just a joke, but I guessed your number correctly &#128512;'
                                 })
                             }, 3000)
                         }, 3000)
                     }, 4000)
-                }, 3000)           
+                }, 3000)
             }
         }
     </script>
 </body>
+
 </html>

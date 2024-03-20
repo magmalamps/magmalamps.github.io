@@ -4,7 +4,7 @@
 
 # MagmaLamps Webpage
 
-MagmaLamps is a Website that contains all of my HTML projects. There are useful, funny and informative!
+MagmaLamps is a Website that contains all of my HTML projects. They are useful, funny and informative!
 
 
 ## Projects included

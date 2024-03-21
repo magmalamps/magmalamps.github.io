@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="clickerstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+</head>
+
+<body onload=LoadScore()>
+    <h1>Clicker Game!</h1>
+
+    <div class="clicker_conatiner">
+        <br>
+        <p>Everytime you click the button the score doubles or resets back to 1. <br>
+            <br>
+            Chances: 90% Double 10% Loose
+        </p>
+        <div class="buttons">
+            <button onclick="Clicker()">Click</button>
+            <p id="indicator">Score: </p>
+        </div>
+    </div>
+
+    <h2>How?</h2>
+    <p>Everytime you click the button the score doubles or resets back to 1. <br>
+        Chances: <strong>80% Double 20% Loose.</strong>
+        The current score also saves in LocalStorage, which means that you can leave the website
+        and your score is still saved. But there is a catch: <strong>Your highscore isn´t saved!</strong>
+        Think wisely before clicking the button if you have a higher score!
+    </p>
+</body>
+
+<script>
+    function LoadScore() {
+        var loaded_score = localStorage.getItem("score")
+        var paragraph = document.getElementById('indicator');
+        paragraph.innerHTML = "Score: " + loaded_score
+    }
+
+    function Clicker() {
+        var randomNumber = Math.random();
+        var paragraph = document.getElementById('indicator');
+        var current_score = parseInt(paragraph.innerHTML.replace("Score: ", ""));
+        var double = current_score * 2;
+
+        if (randomNumber < 0.9) {
+            paragraph.innerHTML = "Score: " + double;
+            localStorage.setItem("score", double)
+        } else {
+            paragraph.innerHTML = "Score: 1";
+            localStorage.setItem("score", "1")
+        }
+    }
+</script>
+
+</html>

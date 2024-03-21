@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="icon/favicon.ico">
     <link rel="stylesheet" href="styleopen.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,12 @@
     <br>
     <div class="container">
         <button onclick="darknormal()">Dark-Normal</button>
+        <button onclick="test_darknormal()">Test Dark-Normal</button>
     </div>
+    <br>
+    <br>
+
+    <a href="../index.html" class="back">-Go Back-</a>
 
 </body>
 
@@ -28,6 +34,10 @@
     function darknormal() {
         navigator.clipboard.writeText('<link rel="stylesheet" href="magmalamps.github.io/openstyles/dark-normal/dark-normal-style.css">')
         alert("Copied to clipboard!")
+    }
+
+    function test_darknormal() {
+        window.location.href = "magmalamps.github.io/dark-normal/dark-normal.html";
     }
 </script>
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styleopen.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Styles</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Open Styles For Devs</h1>
+    </div>
+
+    <p>Need a quick stylesheet? Here you go!</p>
+    <p>Just click the theme you like and paste the URL in the head of your website.</p>
+
+    <br>
+    <br>
+
+    <button onclick="darknormal()">Dark-Normal</button>
+</body>
+
+<script>
+    function darknormal() {
+        navigator.clipboard.writeText('<link rel="stylesheet" href="magmalamps.github.io/openstyles/dark-normal/dark-normal-style.css"')
+        alert("Copied to clipboard!")
+    }
+</script>
+
+</html>

@@ -9,6 +9,7 @@ MagmaLamps is a Website that contains all of my HTML projects. They are useful, 
 
 ## Projects included
 
+- Clicker Game!
 - Clipboard Creator
 - Color Game!
 - Information about Lava Lamps
@@ -17,6 +18,9 @@ MagmaLamps is a Website that contains all of my HTML projects. They are useful, 
 
 
 ## Defintion
+
+- Clicker Game!: A game where you try to get a high score. Everytime you click the button there is a 10% chance of resetting your entire score but also a 90% chance
+to double it. You can compete with your friends!
 
 - Clipboard Creator: You can create and save infinite clipboards and use them at any time
 
@@ -34,7 +38,7 @@ MagmaLamps is a Website that contains all of my HTML projects. They are useful, 
 - Adding new projects
 - Redesign of CSS
 - Adding //coments
-
+- coming soon
 
 
 

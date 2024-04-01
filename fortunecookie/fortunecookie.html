@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="../icon/favicon.ico">
+    <link rel="stylesheet" href="fortune.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Cookie Creator</title>
+</head>
+
+<body>
+    <h1>Fortune Cookie Creator</h1>
+    <br>
+
+    <p>Create a digital fortune cookie for your friends and family to open! Please don´t use any special characters like
+        ä,ü,ö, any uppercase letters and numbers.
+    </p>
+
+    <input type="text" placeholder="Your fortune cookies message" id="message">
+    <br>
+    <br>
+    <div class="button">
+        <button onclick="bake()">Bake your fortune cookie</button>
+        <p id="textdisplay"></p>
+    </div>
+
+    <p><em>This website uses JavaScript. Make sure that you have enabled it.</em></p>
+    <a href="../index.html" class="back">-Go Back-</a>
+</body>
+
+<script>
+    function encrypt(text) {
+        let encryptedText = [];
+
+        for (let i = 0; i < text.length; i++) {
+            if (text[i] === " ") {
+                encryptedText.push("0");
+            } else {
+                let charCode = text.charCodeAt(i) - 96;
+                if (charCode < 1 || charCode > 26) {
+                    encryptedText.push("0");
+                } else {
+                    encryptedText.push(charCode.toString());
+                }
+            }
+        }
+        return encryptedText.join("-");
+    }
+
+
+    function bake() {
+        var message = document.getElementById("message").value;
+        var text = document.getElementById("textdisplay")
+        var link = encrypt(message)
+
+        setTimeout(function () {
+            text.innerHTML = "Turning oven to 200°C..."
+            setTimeout(function () {
+                text.innerHTML = "Baking your cookie..."
+                setTimeout(function () {
+                    text.innerHTML = "Your digital-cookie-code: " + link
+                }, 4000)
+            }, 4000)
+        }, 0)
+    }
+</script>
+
+</html>

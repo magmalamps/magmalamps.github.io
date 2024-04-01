@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="../../icon/favicon.ico">
+    <link rel="stylesheet" href="../fortune.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redeem your digital cookie</title>
+</head>
+
+<body>
+    <h1>Redeem your fortune cookie!</h1>
+    <p>Was someone nice and they have baked your a digital fortune cookie?
+        If yes cou can redeem it right here to read its message!
+    </p>
+    <br>
+    <input type="text" id="code" placeholder="Your cookie-code goes in here">
+    <br>
+    <br>
+    <br>
+    <div class="button">
+        <button onclick="cookie_show()">Get my digital cookie!</button> <br>
+        <img src="" alt="" id="image" width="20%" onclick="recieve()">
+        <div class="cookie_text">
+            <p id="textdisplay"></p>
+        </div>
+    </div>
+    <br> <br>
+    <audio src="crack_cookie.mp3" id="cookie_crack"></audio>
+    <p>If you want to create your own digital-fortune-cookie for your friend, you can visit this
+        page: <a
+            href="magmalamps.github.io/fortunecookie/fortunecookie.html">magmalamps.github.io/fortunecookie/fortunecookie.html</a>
+    </p>
+
+    <p><em>This website uses JavaScript. Make sure that you have enabled it.</em></p>
+    <a href="../../index.html" class="back">-Go Back-</a>
+</body>
+
+<script>
+    function decrypt(text) {
+        let decryptedText = "";
+
+        let chunks = text.split("-");
+        for (let i = 0; i < chunks.length; i++) {
+            let chunk = chunks[i];
+            if (chunk === "0") {
+                decryptedText += " ";
+            } else {
+                let charCode = parseInt(chunk);
+                if (!isNaN(charCode)) {
+                    decryptedText += String.fromCharCode(charCode + 96);
+                }
+            }
+        }
+
+        return decryptedText;
+    }
+
+    function cookie_show() {
+        var image = document.getElementById("image");
+        var textdisplay = document.getElementById("textdisplay");
+
+        textdisplay.innerHTML = "Click the cookie to open it!"
+        image.src = 'pictures/cookie.png'
+    }
+
+    function recieve() {
+        var code = document.getElementById("code").value;
+        var decrypted = decrypt(code);
+        var image = document.getElementById("image");
+        var textdisplay = document.getElementById("textdisplay");
+
+        image.src = ''
+        document.getElementById("cookie_crack").play()
+        textdisplay.innerHTML = "Your message: " + decrypted
+    }
+</script>
+
+</html>

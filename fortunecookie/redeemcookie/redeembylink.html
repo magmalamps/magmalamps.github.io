@@ -21,6 +21,25 @@
 </body>
 
 <script>
+    function decrypt(text) {
+        let decryptedText = "";
+
+        let chunks = text.split(".");
+        for (let i = 0; i < chunks.length; i++) {
+            let chunk = chunks[i];
+            if (chunk === "0") {
+                decryptedText += " ";
+            } else {
+                let charCode = parseInt(chunk);
+                if (!isNaN(charCode)) {
+                    decryptedText += String.fromCharCode(charCode + 96);
+                }
+            }
+        }
+
+        return decryptedText;
+    }
+
     function recieve() {
         const urlParams = new URLSearchParams(window.location.search);
         const code = urlParams.get('code');

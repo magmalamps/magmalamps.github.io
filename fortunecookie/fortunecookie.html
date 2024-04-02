@@ -9,7 +9,7 @@
     <title>Fortune Cookie Creator</title>
 </head>
 
-<body>
+<body onload="onload()">
     <h1>Fortune Cookie Creator</h1>
     <br>
 
@@ -22,7 +22,8 @@
     <br>
     <div class="button">
         <button onclick="bake()">Bake your fortune cookie</button>
-        <p id="textdisplay"></p>
+        <button onclick="copy_code()" id="copybtn">Copy cookie-code</button>
+        <p id="textdisplay" class="txt"></p>
     </div>
 
     <p><em>This website uses JavaScript. Make sure that you have enabled it.</em></p>
@@ -30,6 +31,11 @@
 </body>
 
 <script>
+    function onload() {
+        copybtn = document.getElementById('copybtn')
+        copybtn.disabled = true;
+    }
+
     function encrypt(text) {
         let encryptedText = [];
 
@@ -48,21 +54,29 @@
         return encryptedText.join(".");
     }
 
-
     function bake() {
         var message = document.getElementById("message").value;
         var text = document.getElementById("textdisplay")
         var link = encrypt(message)
+        var copybtn = document.getElementById('copybtn')
 
         setTimeout(function () {
             text.innerHTML = "Turning oven to 200°C..."
             setTimeout(function () {
                 text.innerHTML = "Baking your cookie..."
                 setTimeout(function () {
-                    text.innerHTML = "Your digital-cookie-code: " + link
+                    text.innerHTML = "Done! You can click the copy button now"
+                    copybtn.disabled = false;
                 }, 4000)
             }, 4000)
         }, 0)
+    }
+
+    function copy_code() {
+        var message = document.getElementById("message").value;
+        var link = encrypt(message)
+        navigator.clipboard.writeText(link)
+        alert("Copied: " + link)
     }
 </script>
 

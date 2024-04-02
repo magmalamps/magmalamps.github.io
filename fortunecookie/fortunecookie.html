@@ -81,8 +81,9 @@
     function copy_code() {
         var message = document.getElementById("message").value;
         var link = encrypt(message)
-        navigator.clipboard.writeText(link)
-        alert("Your cookie code: " + link)
+        //
+        navigator.clipboard.writeText("magmalamps.github.io/fortunecookie/redeemcookie/redeembylink.html?code=" + link)
+        alert("Copied the link to your digital cookie!")
     }
 </script>
 

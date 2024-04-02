@@ -4,7 +4,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+h1,
+h2 {
     text-align: center;
 }
 
@@ -65,4 +66,8 @@ button[disabled] {
 
 p.txt {
     padding-bottom: 7px;
+}
+
+a {
+    color: rgb(155, 207, 253);
 }

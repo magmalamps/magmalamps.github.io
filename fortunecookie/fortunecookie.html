@@ -25,7 +25,13 @@
         <button onclick="copy_code()" id="copybtn">Copy cookie-code</button>
         <p id="textdisplay" class="txt"></p>
     </div>
-
+    <h2>How?</h2>
+    <p>Write any message you like in the input field. Then click the bake button
+        to bake your digital cookie. You can then click the copy button and send the copied
+        code to anyone you want. They are now able to enter that code on <a href="redeemcookie/redeemcookie.html">this
+            site</a>
+        to see your message and enjoy your digital cookie.
+    </p>
     <p><em>This website uses JavaScript. Make sure that you have enabled it.</em></p>
     <a href="../index.html" class="back">-Go Back-</a>
 </body>
@@ -76,7 +82,7 @@
         var message = document.getElementById("message").value;
         var link = encrypt(message)
         navigator.clipboard.writeText(link)
-        alert("Copied: " + link)
+        alert("Your cookie code: " + link)
     }
 </script>
 

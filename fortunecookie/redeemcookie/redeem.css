@@ -52,3 +52,8 @@ div.cookie_text {
 p.showmsg {
     padding: 10px;
 }
+
+div.cookie {
+    background-color: rgb(67, 67, 67);
+    border-radius: 7px;
+}

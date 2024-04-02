@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="redeem.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital-Fortune-Cookie</title>
+</head>
+
+<body>
+    <h1>Your digital fortune cookie has just arrived!</h1>
+    <p>Here it is! Click the fortune cookie down below to see its content.</p>
+    <div class="cookie">
+        <br>
+        <img src="pictures/cookie.png" alt="" id="image" width="20%" onclick="recieve()">
+        <p></p>
+        <br>
+    </div>
+
+</body>
+
+<script>
+    function recieve() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        var decrypted = decrypt(code);
+        var image = document.getElementById("image");
+        var textdisplay = document.getElementById("textdisplay");
+
+        image.src = ''
+        document.getElementById("cookie_crack").play()
+        textdisplay.innerHTML = "Your message: " + decrypted
+    }
+</script>
+
+</html>

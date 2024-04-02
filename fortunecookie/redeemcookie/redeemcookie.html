@@ -3,14 +3,14 @@
 
 <head>
     <link rel="icon" href="../../icon/favicon.ico">
-    <link rel="stylesheet" href="../fortune.css">
+    <link rel="stylesheet" href="redeem.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redeem your digital cookie</title>
+    <title>Digital-Cookie-Code</title>
 </head>
 
 <body>
-    <h1>Redeem your fortune cookie!</h1>
+    <h1>Redeem your fortune cookie</h1>
     <p>Was someone nice and they have baked your a digital fortune cookie?
         If yes cou can redeem it right here to read its message!
     </p>
@@ -20,20 +20,26 @@
     <br>
     <br>
     <div class="button">
+        <br>
         <button onclick="cookie_show()">Get my digital cookie!</button> <br>
-        <img src="" alt="" id="image" width="20%" onclick="recieve()">
+        <br>
+        <img src="" alt="" id="image" width="40%" onclick="recieve()">
         <div class="cookie_text">
-            <p id="textdisplay"></p>
+            <p id="textdisplay" class="showmsg"></p>
         </div>
     </div>
     <br> <br>
     <audio src="crack_cookie.mp3" id="cookie_crack"></audio>
-    <p>If you want to create your own digital-fortune-cookie for your friend, you can visit this
-        page: <a href="../fortunecookie.html">magmalamps.github.io/fortunecookie/fortunecookie.html</a>
-    </p>
 
-    <p><em>This website uses JavaScript. Make sure that you have enabled it.</em></p>
-    <a href="../../index.html" class="back">-Go Back-</a>
+    <div class="information">
+        <p>If you want to create your own digital-fortune-cookie for your friend, you can visit this
+            page: <a href="../fortunecookie.html">magmalamps.github.io/fortunecookie/fortunecookie.html</a>
+        </p>
+
+        <p><em>This website uses JavaScript. Make sure that you have enabled it.</em></p>
+        <a href="../../index.html" class="back">-Go Back-</a>
+    </div>
+
 </body>
 
 <script>

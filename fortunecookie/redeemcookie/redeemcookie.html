@@ -46,7 +46,7 @@
     function decrypt(text) {
         let decryptedText = "";
 
-        let chunks = text.split("-");
+        let chunks = text.split(".");
         for (let i = 0; i < chunks.length; i++) {
             let chunk = chunks[i];
             if (chunk === "0") {

@@ -95,3 +95,7 @@ h1.counter {
 .footer {
     position: relative;
 }
+
+body {
+    overflow: hidden;
+}

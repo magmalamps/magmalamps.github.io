@@ -97,5 +97,6 @@ h1.counter {
 }
 
 body {
+    /* Disable scroll */
     overflow: hidden;
 }

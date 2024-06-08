@@ -83,3 +83,15 @@ body {
 h1.counter {
     font-size: 10vh;
 }
+
+.motivation {
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: large;
+}
+
+.footer {
+    position: relative;
+}

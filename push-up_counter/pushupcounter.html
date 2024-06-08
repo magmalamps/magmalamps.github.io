@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="push-up_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push-Up Counter</title>
+</head>
+
+<body onclick="push()">
+    <h1 class="counter" id="counttext">0</h1>
+    <p>push-ups</p>
+</body>
+<script>
+    var count = 0
+    const text = document.getElementById("counttext")
+    function push() {
+        count = count + 1
+        console.log(count)
+        document.getElementById("counttext").innerHTML = count;
+    }
+
+</script>
+
+</html>
